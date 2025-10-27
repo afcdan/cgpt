@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DAN EVANS — personal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Full-screen canvas used for the "television static" effect -->
+  <canvas id="staticCanvas"></canvas>
+
+  <!-- Overlay contains the stacked logo (top + bottom) centered on screen -->
+  <div id="logoOverlay" class="centered">
+    <img id="logoTop" src="DAN.png" alt="Top half of logo" />
+    <img id="logoBottom" src="EVANS.png" alt="Bottom half of logo" />
+  </div>
+
+  <!-- Header that shows after logo transitions -->
+  <header id="pageHeader" class="hidden">
+    <div id="headerContent">
+      <div id="headerLogoHolder">
+        <img id="headerLogo" src="DAN.png" alt="Header logo" />
+      </div>
+      <button id="burger" aria-label="Open menu" title="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main content revealed after logos slide to header/footer -->
+  <main id="mainContent" class="hidden">
+    <a class="row" id="row1" href="#" target="_self">
+      <div class="rowText">Row 1</div>
+    </a>
+    <a class="row" id="row2" href="#" target="_self">
+      <div class="rowText">Row 2</div>
+    </a>
+    <a class="row" id="row3" href="#" target="_self">
+      <div class="rowText">Row 3</div>
+    </a>
+  </main>
+
+  <!-- Footer that shows after logo transitions -->
+  <footer id="pageFooter" class="hidden">
+    <div id="footerLogoHolder">
+      <img id="footerLogo" src="EVANS.png" alt="Footer logo" />
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
